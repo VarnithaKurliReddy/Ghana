@@ -18,7 +18,7 @@
 
 # 3. SECTIONS
 # 3.1 Load shape files 
-# 3.2 Calculate built up-road,land,and water mean value and count of pixels with built up in spatial lag 1-(3 x 3) and spatial lag 2-(5 X 5)
+# 3.2 Calculate built up,road,land,and water,sea, population mean value and count of pixels with built up in spatial lag 1-(3 x 3) and spatial lag 2-(5 X 5)
 # 3.3 Load and Modify the road shape file.
 # 3.4 Calculate road grid  mean value and count of pixels with road network in spatial lag 1-(3 x 3) and spatial lag 2-(5 X 5)
 # 3.5 Calculate water bodies mean value and count of pixels with waterbodies in spatial lag 1-(3 x 3) and spatial lag 2-(5 X 5).
@@ -108,7 +108,7 @@ Ghana.admin.0 <- readOGR(dsn=GIS,layer="gh_adm0_merge2_clean_geo")
 # initiate stack
 x <- stack()
 #-------------------------------------------------------------------------------
-#### 3.2 Calculate built up-road,land,water mean value and sum value with built up in spatial lag 1-(3 x 3) and spatial lag 2-(5 X 5)
+#### 3.2 Calculate built up mean value and sum value in spatial lag 1-(3 x 3) and spatial lag 2-(5 X 5)
 #-------------------------------------------------------------------------------
 for (yyyy in years) {
   print(yyyy)
